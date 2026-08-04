@@ -39,8 +39,15 @@ readings. Writing the next generation here keeps both legible.
 
 The terms the doctrine relies on, each of which has an ordinary meaning that misleads:
 
-- **useful object** — an object usable the moment it is initialized, no dependency
-  uninitialized, no nil reference error reachable through a dependency.
+- **useful object** — an object that can be **used**, meaning invoked, immediately after its
+  initializer has run: no dependency uninitialized, and no nil reference error reachable
+  through one. The definition carries a second clause the term's plain reading does not
+  suggest — **the initializer constructs or enables no operational dependency**, whether or
+  not that dependency could have side effects, though the side-effecting case is what makes
+  it matter, external and input/output above all. Usefulness on arrival is not bought by
+  standing the dependencies up. The **constructor** is where operational dependencies come
+  from, and it is not constrained by this. See the Characteristics of a Useful Object design,
+  characteristic 1.
 - **substitute** — any object conforming to a dependency's interface and its semantics.
   There is no primary or secondary substitute and no real instance against a fake one; all
   substitutes are equally real, which is what makes the property substitutability rather
@@ -122,8 +129,16 @@ issues. The demos carrying this were uncommitted working changes when this was r
 
 ## The doctrine, restated
 
-The doctrine is rewritten from the premise rather than reorganized from the prior text. The
-positions the prior generation argues, and which the restatement inherits as its subject
+The doctrine is rewritten from the premise rather than reorganized from the prior text.
+
+**The claims it argues are enumerated separately**, in two documents that hold the lists
+apart from the prose that argues them. The **Characteristics of a Useful Object** design
+holds this generation's statement, and a characteristic enters it only when the developer
+states it. The **Legacy Characteristics of a Useful Object** design holds the prior
+generation's list, carried forward as source material and revised only where a settled
+decision requires. The doctrine points at them rather than restating either.
+
+The positions the prior generation argues, and which the restatement inherits as its subject
 matter:
 
 - Dependencies default to safe, inert substitutes, so the initializer leaves nothing nil.
@@ -220,3 +235,8 @@ Authored by Scott Bellware on Tue Aug 4 2026 at 11:09:17 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:11:50 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:17:16 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:21:08 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 11:23:43 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 11:26:52 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 11:30:41 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 11:32:33 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 11:36:23 AM PT

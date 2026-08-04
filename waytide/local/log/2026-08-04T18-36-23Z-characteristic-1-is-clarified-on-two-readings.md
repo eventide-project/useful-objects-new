@@ -1,0 +1,1 @@
+# Characteristic 1 is clarified on two readings — the side-effect clause is a reason rather than a restriction, so the initializer constructs or enables no operational dependency at all, and "initialization" means the initializer, leaving the constructor as the path that produces operational dependencies

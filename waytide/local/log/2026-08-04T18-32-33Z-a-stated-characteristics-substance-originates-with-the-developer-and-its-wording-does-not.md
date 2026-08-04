@@ -1,0 +1,1 @@
+# A characteristic's substance originates with the developer and its wording does not — statements are recorded in their clearest form and ambiguities are put back rather than settled quietly — and the second characteristics document drops the "dictated" qualifier, the legacy one carrying the distinction

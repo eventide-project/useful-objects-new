@@ -1,0 +1,1 @@
+# Characteristics the developer dictates are collected in their own design, growing only by dictation, and the pre-populated list is renamed the Legacy Characteristics of a Useful Object — kept as source material, with the one dictated characteristic moved out of it

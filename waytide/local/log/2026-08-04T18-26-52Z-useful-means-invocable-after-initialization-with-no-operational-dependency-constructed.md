@@ -1,0 +1,1 @@
+# Useful means an object can be invoked immediately after initialization and that initialization constructs or enables no operational dependency capable of side effects, external and input/output side effects especially — recorded as characteristic 10, the first new to this generation

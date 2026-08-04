@@ -1,0 +1,1 @@
+# The characteristics of a useful object are held in their own design document, apart from the prose that argues them, seeded from the prior generation's list and revised only where a settled decision requires
