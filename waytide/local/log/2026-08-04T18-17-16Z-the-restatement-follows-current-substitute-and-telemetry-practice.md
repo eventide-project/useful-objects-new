@@ -1,0 +1,1 @@
+# The doctrine's restatement follows current substitute and telemetry practice as demonstrated in dependencies-and-substitutes — mimics rather than null objects, specialization modules rather than subclasses, and invocation recording with consonant predicates rather than telemetry sinks

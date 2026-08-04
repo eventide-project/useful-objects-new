@@ -1,0 +1,1 @@
+# This generation avoids Eventide's Telemetry library, carrying transparency through invocation recording instead, and the word telemetry is kept in its general sense as an object's self-reported execution data rather than as the name of a library

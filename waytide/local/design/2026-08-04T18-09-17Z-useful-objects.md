@@ -45,21 +45,80 @@ The terms the doctrine relies on, each of which has an ordinary meaning that mis
   There is no primary or secondary substitute and no real instance against a fake one; all
   substitutes are equally real, which is what makes the property substitutability rather
   than a testing convenience.
-- **null object substitute** — the most basic safe and inert substitute, and the default a
-  dependency is initialized to. **Weak** where it responds to any invocation sent to it;
-  **strict** where it conforms to a specific interface and refuses the rest.
+- **mimic** — an object generated from a subject class, carrying that class's interface,
+  and the substitute a dependency is initialized to by default. It is what the prior
+  generation's hand-constructed **null object substitute** became; the weak-against-strict
+  distinction the prior doctrine drew is no longer the operative one, because a mimic takes
+  its strictness from the interface it mimics.
+- **consonant predicate** — a domain-meaningful predicate a substitute exposes on its public
+  interface — `posted?(content)` — so that a substitute is read in the domain's terms rather
+  than through the mechanical invocation record underneath it.
 - **actuator** — the single method that sets an object's one act in motion, implemented as
   `call`. A class carries one as well as an instance, paralleling the initializer and the
   constructor.
 - **configuration** — the assignment of collaborator dependencies to the objects that
   depend on them, in the sense the actor model uses. Not settings or preference data.
-- **transparency** — an object's provision for insight into its own execution, carried by
-  telemetry. Transparency is of the design and is *used by* tests; it is not of tests.
+- **transparency** — an object's provision for insight into its own execution. Transparency
+  is of the design and is *used by* tests; it is not of tests. The position holds; what
+  carries it has changed, from telemetry sinks to invocation recording.
+- **telemetry** — an object's self-reported execution data, in the general sense the prior
+  doctrine uses. The term is **kept general and is not the name of a library**: this
+  generation does not use Eventide's Telemetry library, and the word does not refer to it
+  here. Telemetry is the data; transparency is the design quality that provides for it;
+  invocation recording is the mechanism that carries it.
 - **product generation** — the leading segment of a four-segment version, a
   product-management declaration that a new product line has begun (see the `versioning`
   package's vocabulary). The developer's phrase *next generation* is a declaration of
   exactly this kind. Whether this project carries the segment in its versions is a separate
   declaration and is open below.
+
+## What has evolved since the prior generation
+
+The prior doctrine's mechanisms are not the current ones. Current practice is demonstrated
+in the `dependencies-and-substitutes` repository, whose numbered demos are the reference the
+restatement follows. Two areas have moved, and they are the two the prior doctrine spends
+the most prose on.
+
+### Substitutes
+
+- **A dependency's default substitute is a mimic**, generated from the subject class, rather
+  than a null object constructed for the purpose. Declaring a dependency against a class
+  yields an object carrying that class's interface, and an invocation the subject does not
+  define raises rather than being absorbed. Strictness comes from mimicking a real
+  interface, so the weak-against-strict null object distinction is no longer operative.
+- **A `Substitute` module specializes the mimic rather than subclassing the subject.** The
+  prior doctrine wrote a substitute as a subclass overriding methods to feign their side
+  effects. The current form is a module whose methods are added to the generated mimic.
+- **That module serves more than one purpose, and the purposes are not yet named.** One form
+  supplies a constructor deciding what the substitute is; another supplies methods extended
+  into the mimic. The demos' own notes carry the naming — constructors against extensions —
+  as outstanding work.
+
+### Telemetry
+
+- **Eventide's Telemetry library is not used**, and this generation takes no dependency on
+  it. The demos do not reach for it, and the transparency the prior doctrine argued for is
+  carried without it.
+- **Invocation recording replaces the telemetry sink** for observing a substitute. Where the
+  prior doctrine registered a sink and asked it what it had recorded, a substitute is now
+  interrogated directly.
+- **Mimics record by default.** Recording was formerly activated explicitly, and the demos
+  that activate it predate the change. It is now held that a mimic is always a recording
+  object.
+- **The consonant predicate is the current idiom**, so that the mechanical invocation record
+  is not what a substitute's users read.
+- **The predicate macro is obsolete.** The recorder's predicate mixin and its declaration
+  are retired; a consonant predicate is written as an ordinary method.
+
+**One question here is open, and the restatement should not present it as settled.** Because
+a mimic records by default and already carries the invocation predicate, a `Substitute`
+module's inclusion of the recording mixin and its recorded method definition can both be
+removed with no change in behavior — and a specialized body written there never executes,
+since the method is not implemented on the substitute. The effect is that the invocation
+predicate appears to come from nowhere. Whether a mimic should record only when serving as a
+dependency's substitute is under consideration in the mimic and dependency libraries' own
+issues. The demos carrying this were uncommitted working changes when this was read on
+2026-08-04.
 
 ## The doctrine, restated
 
@@ -75,8 +134,9 @@ matter:
   asked.
 - Objects are behavioral first and data second, so an object's single act needs no
   ceremony in its name.
-- Telemetry rather than test doubles. A design that needs a mock is a design not
-  accounting for a use it is already engaged in.
+- Transparency rather than test doubles. A design that needs a mock is a design not
+  accounting for a use it is already engaged in. The prior doctrine argues this through
+  telemetry sinks; the restatement argues it through invocation recording.
 - Irreducible boilerplate is accepted rather than abstracted away, because the abstraction
   that removes it costs more than the tedium does.
 
@@ -86,13 +146,16 @@ What the restatement changes about how these are argued is not settled here.
 
 Objects built to the doctrine, exercised by a test suite, which the doctrine cites in place
 of inline code blocks. What it demonstrates is fixed by what the doctrine claims: a
-dependency defaulting to a null object substitute, the primitive initializer beside the
-complex constructor, the class and instance actuators, a concrete substitute, and telemetry
-registration against a sink.
+dependency defaulting to a mimic substitute, the primitive initializer beside the complex
+constructor, the class and instance actuators, a specialized substitute, and a consonant
+predicate over a recorded invocation.
 
-The mechanisms these rest on already exist as their own libraries — `evt-dependency`,
-`evt-initializer`, `evt-telemetry`, `evt-configure`. This repository **uses** them and is
-not their home; see Out of Scope.
+The mechanisms these rest on already exist as their own libraries. The set the current
+practice draws on is `evt-dependency`, `evt-mimic`, `evt-record_invocation`, and
+`evt-subst_attr`, beside the supporting `evt-attribute`, `evt-invocation`, and
+`evt-reflect` — not the prior doctrine's set, which named a telemetry and a configuration
+library the demos do not use. This repository **uses** these and is not their home; see Out
+of Scope.
 
 ## Settled
 
@@ -104,16 +167,33 @@ not their home; see Out of Scope.
   in the `useful-objects` repository is left as written and is not edited in place.
 - **2026-08-04** — The doctrine's demonstration moves out of its prose and into an
   implementation that is run and protected by tests.
+- **2026-08-04** — The restatement follows **current practice**, demonstrated in the
+  `dependencies-and-substitutes` repository, rather than the mechanisms the prior generation
+  describes. Substitutes and telemetry are the two areas that moved.
+- **2026-08-04** — This generation **avoids Eventide's Telemetry library**. Transparency is
+  carried by invocation recording instead, and no dependency is taken on that library.
+- **2026-08-04** — The word **telemetry is kept general** — an object's self-reported
+  execution data, as the prior doctrine uses it — and is not the name of a library here. The
+  doctrine's existing argument carries over with its vocabulary intact; what changed is the
+  mechanism beneath it.
 - **2026-08-04** — A companion project, `useful-objects-website`, is **external** to this
   repository. It is built with Hugo and the Hextra theme, and its content references this
   project. It does not exist yet, and is created once this project has more clarity.
 
 ## Out of Scope / Deferred
 
-- **The mechanisms themselves.** The dependency, initializer, telemetry, and configuration
-  macros are separate libraries. This repository depends on them and does not re-implement
-  or absorb them. This boundary follows from the premise: the deliverables are the argument
-  and its demonstration, not the machinery either one uses.
+- **The mechanisms themselves.** The dependency, mimic, invocation-recording, and
+  substitute-attribute libraries are their own. This repository depends on them and does not
+  re-implement or absorb them. This boundary follows from the premise: the deliverables are
+  the argument and its demonstration, not the machinery either one uses.
+- **Eventide's Telemetry library.** It is not used and not depended on, and the doctrine
+  does not argue against it — it is simply not the mechanism this generation reaches for.
+  Where the prior doctrine demonstrated transparency through a sink, the restatement
+  demonstrates it through invocation recording.
+- **Resolving the recording-by-default question.** Whether a mimic should record only when
+  serving as a dependency's substitute is being worked in those libraries, not here. What
+  falls to this project is stating the practice honestly, including that the question is
+  open.
 - **Editing the prior generation.** The `useful-objects` repository is a historical record
   and stays as written.
 - **The companion website.** `useful-objects-website` is its own repository, and its
@@ -138,3 +218,5 @@ Open, and to be settled as the work reaches them:
 
 Authored by Scott Bellware on Tue Aug 4 2026 at 11:09:17 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:11:50 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 11:17:16 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 11:21:08 AM PT
