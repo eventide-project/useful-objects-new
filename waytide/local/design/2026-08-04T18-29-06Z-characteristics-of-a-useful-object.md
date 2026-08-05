@@ -39,6 +39,21 @@ A useful object:
 
    *Stated 2026-08-04, clarified the same day on two readings.*
 
+2. **Has a single purpose.** In practice, the purpose of an object is to do **one thing** —
+   save some data, carry out some business transaction.
+
+   **The implication is that most objects in any system can be implemented as command
+   objects**, which is what learning what object-orientation (OO) has always offered comes
+   down to. The implication is noted rather than claimed: the characteristic is that the
+   object has one purpose, and the prevalence of command objects is what follows from it
+   across a system.
+
+   **It says nothing about how the purpose is invoked.** An object with a single purpose may
+   still expose more than one public method, and whether one actuator sets its act in motion
+   is a separate claim that is not made here.
+
+   *Stated 2026-08-04.*
+
 ---
 
 Authored by Scott Bellware on Tue Aug 4 2026 at 11:29:06 AM PT
@@ -46,3 +61,4 @@ Changed by Scott Bellware on Tue Aug 4 2026 at 11:30:41 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:32:33 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:36:23 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:43:50 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:10:39 PM PT

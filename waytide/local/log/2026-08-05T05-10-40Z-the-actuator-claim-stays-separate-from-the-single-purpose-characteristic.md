@@ -1,0 +1,1 @@
+# The claim that a single actuator sets an object's act in motion stays separate from the single-purpose characteristic, which says nothing about how a purpose is invoked — the actuator remains an outstanding candidate rather than being folded in

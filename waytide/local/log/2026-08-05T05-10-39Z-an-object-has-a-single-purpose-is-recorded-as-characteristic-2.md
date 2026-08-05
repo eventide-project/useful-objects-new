@@ -1,0 +1,1 @@
+# An object has a single purpose — doing one thing, such as saving some data or carrying out some business transaction — is recorded as characteristic 2, noting the implication that most objects in a system can be implemented as command objects

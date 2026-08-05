@@ -79,6 +79,16 @@ characteristic 1 above and fail that one.
 That is the sharpest difference between the legacy description and this generation's, and it
 is the reason the two lists are worth holding apart rather than merging on sight.
 
+**Characteristic 3 above is restated there at greater length.** This list says only *has a
+single purpose*. The current list's second characteristic says what that means in practice —
+the object does one thing — and notes the implication that follows across a system, that most
+objects can be implemented as command objects. The claim is the same; what the legacy list
+leaves implicit is stated.
+
+**The actuator candidate below survives that restatement.** The current list's second
+characteristic deliberately makes no claim about how an object's purpose is invoked, so
+whether a single actuator sets the act in motion remains unstated in both lists.
+
 ## Candidates for the list, not yet accepted
 
 The prior doctrine's body asserts these, and its list does not. They are recorded here as
@@ -132,3 +142,4 @@ Authored by Scott Bellware on Tue Aug 4 2026 at 11:23:43 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:26:52 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:30:41 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:32:33 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:10:39 PM PT
