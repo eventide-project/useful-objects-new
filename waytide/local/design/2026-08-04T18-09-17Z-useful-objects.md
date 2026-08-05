@@ -60,9 +60,35 @@ The terms the doctrine relies on, each of which has an ordinary meaning that mis
 - **consonant predicate** — a domain-meaningful predicate a substitute exposes on its public
   interface — `posted?(content)` — so that a substitute is read in the domain's terms rather
   than through the mechanical invocation record underneath it.
+- **operative object** — an object that carries out an act. **Behavioral object** and
+  **command object** are glosses for it: the first is the prior generation's word, the second
+  the most widely recognized. *Operative* is the term used here, because a data structure can
+  be said to have behavior while never operating on anything, and because *command* imports a
+  pattern-catalog framing for what is the ordinary case rather than a pattern applied. Objects
+  **are** operative objects; this is what an object in a system ordinarily is, not what one
+  could be implemented as.
+- **object-relational mapping (ORM) object** — the contrast that gives *operative object* its
+  edge. It is a **mix of data structure and state machine**, and what it models is, typically,
+  **tabular row storage** rather than object-oriented behavior. It is largely an **exception**
+  to object-orientation rather than a rule of it, and does not fit without being force-fit.
+  **Methods attached to one do not change this**: behavior hung on a thing that models a
+  stored row does not make it an object that carries out an act. The **state-machine** aspect
+  takes more than one form — persistence lifecycle, attribute change tracking — and each form
+  is itself the less object-oriented part. What it accommodates is **data manipulation**
+  rather than **domain behavior**. Its standing is worth stating precisely: it is the
+  exception in object-orientation, and it can at the same time become the **nexus** of an
+  application built on a model-view-controller (MVC) framework around an ORM, carrying the
+  weight of the implementation — the construct least suited to object-orientation holding the
+  most of the system.
+- **encapsulation** and **compartmentalization** — the two advantages of object-orientation
+  the ORM contrast turns on. Data structures and state machines are not much concerned with
+  either, which is what makes an ORM object an exceptional use of object-orientation rather
+  than an instance of it. Their full statement belongs to the doctrine; they are named here
+  because the argument leans on them.
 - **actuator** — the single method that sets an object's one act in motion, implemented as
   `call`. A class carries one as well as an instance, paralleling the initializer and the
-  constructor.
+  constructor. **It is a separate claim from an object having a single purpose**, and the
+  characteristics deliberately do not fold it in.
 - **configuration** — the assignment of collaborator dependencies to the objects that
   depend on them, in the sense the actor model uses. Not settings or preference data.
 - **transparency** — an object's provision for insight into its own execution. Transparency
@@ -147,8 +173,9 @@ matter:
   inputs and configures operational dependencies. Robustness lives on the class interface.
 - A dependency's own class decides how it is constructed and assigned, told rather than
   asked.
-- Objects are behavioral first and data second, so an object's single act needs no
-  ceremony in its name.
+- Objects are **operative** first and data second, so an object's single act needs no
+  ceremony in its name. The prior doctrine argues this as objects being *behavioral*, which
+  is now a gloss for the term this generation uses.
 - Transparency rather than test doubles. A design that needs a mock is a design not
   accounting for a use it is already engaged in. The prior doctrine argues this through
   telemetry sinks; the restatement argues it through invocation recording.
@@ -240,3 +267,7 @@ Changed by Scott Bellware on Tue Aug 4 2026 at 11:26:52 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:30:41 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:32:33 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:36:23 AM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:20:28 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:40:08 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:42:34 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:44:47 PM PT

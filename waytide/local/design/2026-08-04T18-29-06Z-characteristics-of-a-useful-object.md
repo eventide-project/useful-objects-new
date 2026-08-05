@@ -42,17 +42,50 @@ A useful object:
 2. **Has a single purpose.** In practice, the purpose of an object is to do **one thing** —
    save some data, carry out some business transaction.
 
-   **The implication is that most objects in any system can be implemented as command
-   objects**, which is what learning what object-orientation (OO) has always offered comes
-   down to. The implication is noted rather than claimed: the characteristic is that the
-   object has one purpose, and the prevalence of command objects is what follows from it
-   across a system.
+   **The implication is that objects *are* operative objects** — objects that carry out an
+   act. This is not a claim about what most objects could be implemented as if one chose to;
+   it is what an object in a system ordinarily **is**, and grasping that is what learning
+   object-orientation (OO) comes down to.
+
+   **Operative object** is the term. **Behavioral object** and **command object** are
+   glosses — the first is the prior generation's word, the second the most widely recognized
+   of the three. *Operative* is preferred because a data structure can be said to have
+   behavior while never operating on anything, and because *command* imports a
+   pattern-catalog framing for what is the ordinary case rather than a pattern applied.
+
+   **Object-relational mapping (ORM) objects are the contrast, and they are the exception.**
+   An ORM object is a **mix of data structure and state machine**. What it models is,
+   typically, **tabular row storage** — not object-oriented behavior. It is largely an
+   exception to object-orientation rather than a rule of it, and it does not fit
+   object-orientation without being force-fit.
+
+   **Putting methods on an ORM object does not obviate this.** Behavior attached to a thing
+   that models a stored row does not convert it into an object that carries out an act. What
+   it models is unchanged by what is hung on it, so the exception survives the methods.
+
+   **The state-machine aspect takes more than one form, and each form is itself the less
+   object-oriented part.** Persistence lifecycle and attribute change tracking are both
+   instances of it. Neither is as object-oriented as an operative object, and neither
+   benefits to the same extent from the advantages object-orientation is intended to
+   provide.
+
+   **The advantages in question are encapsulation and compartmentalization above all.** Data
+   structures and state machines are not much concerned with either. That is what makes an
+   ORM object an **exceptional** use of object-orientation — one accommodating **data
+   manipulation** rather than **domain behavior**, and so an exception to object-orientation
+   rather than an instance of it.
+
+   **The exception frequently becomes the center of gravity.** On a model-view-controller
+   (MVC) framework built around an ORM, its objects can become the nexus of an application's
+   implementation and carry the weight of it. The construct least suited to
+   object-orientation ends up holding the most of the system.
 
    **It says nothing about how the purpose is invoked.** An object with a single purpose may
    still expose more than one public method, and whether one actuator sets its act in motion
    is a separate claim that is not made here.
 
-   *Stated 2026-08-04.*
+   *Stated 2026-08-04, its implication sharpened the same day — objects **are** operative
+   objects rather than being implementable as them.*
 
 ---
 
@@ -62,3 +95,7 @@ Changed by Scott Bellware on Tue Aug 4 2026 at 11:32:33 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:36:23 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:43:50 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 10:10:39 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:20:28 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:40:08 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:42:34 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:44:47 PM PT

@@ -1,0 +1,1 @@
+# Operative object is the term for an object that carries out an act, with behavioral object and command object kept as glosses — operative preferred because a data structure can be said to have behavior while never operating, and because command imports a pattern-catalog framing for the ordinary case

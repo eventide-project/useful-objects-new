@@ -1,0 +1,1 @@
+# An object-relational mapping object is a mix of data structure and state machine, modeling tabular row storage rather than object-oriented behavior, and attaching methods to one does not obviate that — the exception survives the methods

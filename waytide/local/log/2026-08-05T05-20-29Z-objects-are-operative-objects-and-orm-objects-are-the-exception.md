@@ -1,0 +1,1 @@
+# Objects are operative objects rather than being implementable as them, and object-relational mapping objects are the contrast — data structures standing for stored rows, largely an exception to object-orientation rather than a rule of it, not fitting without being force-fit

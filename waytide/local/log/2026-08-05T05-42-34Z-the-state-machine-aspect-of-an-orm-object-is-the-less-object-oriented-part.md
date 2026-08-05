@@ -1,0 +1,1 @@
+# The state-machine aspect of an object-relational mapping object takes more than one form — persistence lifecycle and attribute change tracking — and each form is itself the less object-oriented part, benefiting less from what object-orientation is intended to provide than an operative object does

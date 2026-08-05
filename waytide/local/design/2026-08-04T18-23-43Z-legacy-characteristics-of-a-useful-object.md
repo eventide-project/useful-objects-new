@@ -89,6 +89,11 @@ leaves implicit is stated.
 characteristic deliberately makes no claim about how an object's purpose is invoked, so
 whether a single actuator sets the act in motion remains unstated in both lists.
 
+**Characteristic 2 above uses a word that has since become a gloss.** This list says an
+object *is behavioral*. This generation's term is **operative object**, with *behavioral* and
+*command* kept as glosses for it. The legacy wording stands as written — it is what the prior
+generation said — and the substitution is noted here rather than made there.
+
 ## Candidates for the list, not yet accepted
 
 The prior doctrine's body asserts these, and its list does not. They are recorded here as
@@ -143,3 +148,4 @@ Changed by Scott Bellware on Tue Aug 4 2026 at 11:26:52 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:30:41 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 11:32:33 AM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 10:10:39 PM PT
+Changed by Scott Bellware on Tue Aug 4 2026 at 10:20:28 PM PT
