@@ -1,0 +1,1 @@
+# The prior generation's doctrine is copied into waytide/local/reference/ as source material, verbatim and unedited, so the restatement is written against it without reaching into the useful-objects repository
