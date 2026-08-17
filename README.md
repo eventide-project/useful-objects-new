@@ -41,7 +41,9 @@ summary) and **next deferred item**.
 question. The harness supplies the free-text option, so the agent adds none of its own. It does
 add an **`Explain`** option, which is the opposite half of it. The free-text option is how an
 engineer answers outside the options. `Explain` is how they ask what the question means
-before answering.
+before answering. **On the re-displayed prompt it reads `Explain briefly` and answers with the
+summary alone.** An engineer reaching for it a second time did not get what they needed at a
+normal length, so answering at that length again repeats the attempt that failed.
 
 The rule lives here rather than in `design-by-efferent`, where it was written, because it governs **every** prompt. `foundation`'s own lifecycles put decisions through the interface, and so does the standalone `versioning` package. So a project installing `foundation` alone must receive the rule along with the instruction to follow it.
 
@@ -74,14 +76,42 @@ integrates.
 **How plans and designs *read*** is foundation's concern too, meaning their sections. Four
 rules carry it, and they were the `plan` package until it was included here on 2026-08-03:
 
-- **An implementation plan's common elements read in a settled order** — Goals, Source designs,
-  Work sequences, Superseded plans, Architecture, Process notes, Tasks, among others the work
-  calls for. The order is settled. The set is not (`plan-document-format`).
-- **A design doc shares a common spine** — summary or premise, motivation, substantive sections,
-  dated **Settled** resolutions, and an **Out of Scope / Deferred** tail
-  (`design-document-format`).
+- **An implementation plan's common elements read in a settled order** — a canonical `**State:**`
+  line where it has one, Goals, Source designs, Work sequences, Superseded plans, Architecture,
+  Process notes, Tasks, among others the work calls for. The order is settled. The set is not
+  (`plan-document-format`). The state is **Active**, **Implemented**, **Deferred**,
+  **Superseded**, **Abandoned**, or **Suspended**, and every plan carries one — a new plan is
+  **Active** (`plans-convention`). **Implemented** is not taken back, where the direction artifact's
+  **Realized** is: a plan that would expand is superseded by a later one instead. **Deferred** is
+  taken back in both, the moment the work is taken up.
+- **A design doc shares a common spine** — a canonical `**State:**` line where it has one, summary
+  or premise, motivation, substantive sections, dated **Settled** resolutions, and an **Out of
+  Scope / Deferred** tail (`design-document-format`). The state is **Active**, **Realized**, **Deferred**,
+  **Superseded**, **Abandoned**, or **Suspended**, and every design carries one — a new design is
+  **Active** (`design-convention`). **Realized** and **Deferred** are the two state words in
+  the system that are taken back, each returning to **Active**, — a realized design that expands is waiting on the work again,
+  and a deferred one loses the line the moment the work is taken up. **Deferred** reuses the
+  vocabulary's own word for *not yet*, and a `Deferred` artifact does not move into
+  `waytide/local/deferred/`.
 - **Plans contain no code samples**, and avoid committing to method or file names that are not
   yet decided (`plans-no-code-samples`).
+- **A record carrying a state line ends its filename with that state in upper case**
+  (`a-record-ends-with-its-state-in-upper-case`). It reaches the four records that carry one — an
+  experiment, a feature, a direction artifact, and a sequencing artifact — so a directory listing
+  answers which of them concluded, in a file tree, a shell, or an editor sidebar. The upper case
+  is the one stated exception to the file-names rule's lower-case name. The `**State:**` line
+  stays the only authoritative statement, the name is derived from it, and a state change renames
+  the file.
+- **Each artifact pairs with a log entry** — on creation, on each **Settled** resolution, and on
+  each change of state (`direction-and-sequencing-artifacts-take-a-log-entry`). A completed task
+  takes none, and neither does prose that settles nothing. It closes an asymmetry: four other
+  conventions already stated their own pairing, and these two rested on the decision log's
+  when-in-doubt clause.
+- **An experiment record and a feature record each pair with a log entry** too
+  (`experiment-and-feature-records-take-a-log-entry`), on creation and on each change of state. The
+  concluding entry is a **summary marker** where the work merged and **carries the substance**
+  where it did not — a refuted experiment's branch is deleted unmerged, so a record that lived only
+  there is unreachable, which a file deleted from `master` never is.
 - **A design section documenting a package dependency is titled "Package Dependency"**, never a
   bare "Dependency", which is overloaded (`package-dependency-heading`).
 
@@ -113,6 +143,13 @@ per-machine configuration under `~/.config/` is where the
 an observation, or neither. The two rules are only sound together: the first forbids holding a
 preference, and the second is what keeps forbidding it from costing anything. A preference is not
 a rule until it is written, and every restatement of one is evidence that nothing carried it.
+
+**Work in a downstream project is never offered, and its pending state is not reported**
+(`downstream-work-is-never-offered`). A package change leaves every consuming project holding the
+previous version, and closing that gap is the engineer's instruction to give. The rule reaches
+**reporting** as well as asking, because that is where it fails: a trailing line naming what is
+unrefreshed or unpushed is a prompt whatever its grammar. Doing the work when asked, reporting it
+once done, and answering a question about downstream state are each unaffected.
 
 **A historical record is edited for one reason only** — that it discloses what should not have
 been disclosed (`disclosure-is-the-one-reason-to-edit-a-historical-record`). The correction
@@ -236,3 +273,13 @@ Changed by Scott Bellware on Tue Aug 11 2026 at 5:06:31 AM PT
 Changed by Scott Bellware on Wed Aug 12 2026 at 12:14:07 PM PT
 Changed by Scott Bellware on Fri Aug 14 2026 at 11:33:53 AM PT
 Changed by Scott Bellware on Fri Aug 14 2026 at 2:06:30 PM PT
+Changed by Scott Bellware on Fri Aug 14 2026 at 9:08:02 PM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 12:32:17 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 12:37:43 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 1:04:10 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 2:04:53 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 2:19:18 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 2:44:25 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 2:54:58 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 3:03:12 AM PT
+Changed by Scott Bellware on Sun Aug 16 2026 at 3:12:15 AM PT
