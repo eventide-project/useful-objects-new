@@ -192,6 +192,13 @@ dependency defaulting to a mimic substitute, the primitive initializer beside th
 constructor, the class and instance actuators, a specialized substitute, and a consonant
 predicate over a recorded invocation.
 
+**The subject matter is the `dependencies-and-substitutes` demos'.** Those demos model an
+upload and the HTTP client it depends on, and that domain carries into this repository. The
+implementation is written fresh against it, under test, rather than adapted from the demo
+files. So the demos supply what the objects are about, and they are not a source the code is
+taken from. This is the same relation the restatement already has to them: they are the
+reference for current practice rather than material to be copied.
+
 The mechanisms these rest on already exist as their own libraries. The set the current
 practice draws on is `evt-dependency`, `evt-mimic`, `evt-record_invocation`, and
 `evt-subst_attr`, beside the supporting `evt-attribute`, `evt-invocation`, and
@@ -221,6 +228,14 @@ of Scope.
 - **2026-08-04** — A companion project, `useful-objects-website`, is **external** to this
   repository. It is built with Hugo and the Hextra theme, and its content references this
   project. It does not exist yet, and is created once this project has more clarity.
+- **2026-08-17** — The reference implementation's **subject matter is the
+  `dependencies-and-substitutes` demos'** — the upload and the HTTP client it depends on. The
+  implementation is written fresh against that domain, under test, rather than adapted from
+  the demo files.
+- **2026-08-17** — The doctrine is **published on its own website**, at the domain
+  **`object.new`**. That site is the companion project the 2026-08-04 resolution above
+  records, and what it publishes is the doctrine this repository holds. It is addressed
+  later, and the domain is recorded here so the decision is not carried in conversation.
 
 ## Out of Scope / Deferred
 
@@ -243,7 +258,9 @@ of Scope.
   What this project owes it is the material its content will reference — the doctrine and
   the reference implementation — which is what this design is about either way. The
   direction of the reference is one way: the website names this project, and this project
-  does not arrange itself around the website.
+  does not arrange itself around the website. **The `object.new` domain and the site's
+  hosting are that project's**, and the domain is recorded in the Settled resolutions as a
+  decision rather than as work this repository takes up.
 
 Open, and to be settled as the work reaches them:
 
@@ -251,8 +268,9 @@ Open, and to be settled as the work reaches them:
   package name or names.
 - Whether this project's versions carry a leading **product generation** segment, which is a
   declaration to be made on its own occasion rather than derived from this design.
-- Which objects the reference implementation holds, and whether any of the prior
-  generation's example carries over.
+- Which objects the reference implementation holds within the demos' domain, and how many.
+  The subject matter is settled and the set is not. The prior generation's example does not
+  supply that subject matter, and whether anything else in it carries over is open.
 - The doctrine's own structure, and what it revises rather than inherits from the prior
   generation.
 
@@ -272,3 +290,5 @@ Changed by Scott Bellware on Tue Aug 4 2026 at 10:40:08 PM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 10:42:34 PM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 10:44:47 PM PT
 Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 9:57:58 AM PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 10:07:43 AM PT

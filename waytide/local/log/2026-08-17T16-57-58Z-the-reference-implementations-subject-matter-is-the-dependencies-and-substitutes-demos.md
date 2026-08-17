@@ -1,0 +1,1 @@
+# The reference implementation's subject matter is the dependencies-and-substitutes demos' — the upload and the HTTP client it depends on — written fresh against that domain rather than adapted from the demo files
