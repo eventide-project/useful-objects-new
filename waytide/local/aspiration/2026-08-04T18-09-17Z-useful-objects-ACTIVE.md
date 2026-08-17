@@ -1,5 +1,7 @@
 # Useful Objects — Aspiration
 
+- **State:** Active
+
 ## Premise
 
 An object must be **useful immediately upon instantiation**. No dependency of an object is
@@ -292,3 +294,4 @@ Changed by Scott Bellware on Tue Aug 4 2026 at 10:44:47 PM PT
 Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 9:57:58 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:07:43 AM PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 10:17:27 AM PT
