@@ -1,6 +1,43 @@
 # The Doctrine of Useful Objects
 
+A "useful object" is a narrow lens to look through, but it's a starting point to an elegant simplification of the cacophony of "design".
+
+A "useful object" is a narrow lens to look through, but it's an elegant quiet to the cacophony of "design".
+
+A useful object is a behavioral thing. Someone once said something like, _what is an object but a poor man's function_. Even knowing the difference probably gives someone a decent chance of not being poor, either way. But the point about action-oriented design is well received.
+
+The actual quote was more like, _what is an object but a poor man's closure_. It's behavior. And it has some data that it operates on. But it's not a row in a database related to some other row in the database. It's just the part of the code that does the doing. Some doing is indeed saving things and retrieving them, but it's a tiny fraction of objects that do that kind of thing. ORM doesn't map well to OO because ORM is about data going through different phases of it's life and OO is about actions (that inevitably have some pertinent data).
+
+This is the first hinge of "useful objects".
+
+Functions read horizontally (parameters). Objects read vertically (attributes).
+
+Because objects have attributes, objects have the opportunity to have attributes that are the object's dependencies.
+
+It's offensive for an object with dependencies to have to be run through a dependency injection framework or auto-mocking container, or require engineers to even have to crowd their thoughts with these devices.
+
+Mock objects violate the sanctity of objects. They know too much about an object's privacy/private matters, and they impose themselves onto an object from within a test.
+
+A useful object has the opportunity to be testable, because a diagnostic substitute is a legitimate implementation, and often a good default implementation
+* Will have to touch on the objection that they might get out into the wild. You'd know pretty quickly if you had done something like this. I've never even seen that mistake make it off of an engineer's hard drive. In practice, it's hard to get past a useful goalie.
+
+An object
+
+- the whole thing is leading to the ability to prove that your software works, and that they can be understood at a glance - at the most cursory level, albeit,
+
+- make it "testable"
+
+
+
+
+An object should be useful without having any of its dependencies fully realized as operational interfaces. The [substitution principle] is the backbone of object-oriented engineering.
+
+
 An object must be _useful_ immediately upon instantiation of the object. No dependencies of an object should ever be allowed to be uninitialized. If any use of any of an object's dependencies results in a nil reference exception, then the object is not useful.
+
+
+===
+
 
 ## Overview
 
