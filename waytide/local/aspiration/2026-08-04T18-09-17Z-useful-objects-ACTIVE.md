@@ -12,6 +12,8 @@ This repository is the **next generation** of Useful Objects, and it carries two
 deliverables that rest on that one premise:
 
 - **The doctrine, restated** — the argument itself, rewritten rather than revised in place.
+  *In place* means the prior generation's own repository, which is not edited. The rewrite
+  starts from a copy at this repository's root — see the 2026-08-17 resolution below.
 - **A new reference implementation** — objects built to the doctrine, worked and tested,
   which the doctrine points at instead of carrying its demonstration in prose.
 
@@ -234,6 +236,11 @@ of Scope.
   `dependencies-and-substitutes` demos'** — the upload and the HTTP client it depends on. The
   implementation is written fresh against that domain, under test, rather than adapted from
   the demo files.
+- **2026-08-17** — The restatement **starts from a copy of the prior doctrine**, placed at
+  this repository's root as `README.md`. That file is the working document the rewrite
+  proceeds in. The copy under `waytide/local/reference/` stays verbatim, so what was started
+  from remains readable beside what it becomes. The prior generation's own repository is
+  untouched.
 - **2026-08-17** — The doctrine is **published on its own website**, at the domain
   **`object.new`**. That site is the companion project the 2026-08-04 resolution above
   records, and what it publishes is the doctrine this repository holds. It is addressed
@@ -295,3 +302,4 @@ Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 9:57:58 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:07:43 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:17:27 AM PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 10:01:26 PM PT
