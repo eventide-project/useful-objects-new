@@ -1,6 +1,7 @@
 # Legacy Characteristics of a Useful Object — Aspiration
 
 - **State:** Active
+- **Tags:** [aspiration]
 
 ## Summary
 
@@ -153,3 +154,4 @@ Changed by Scott Bellware on Tue Aug 4 2026 at 10:10:39 PM PT
 Changed by Scott Bellware on Tue Aug 4 2026 at 10:20:28 PM PT
 Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:17:27 AM PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 11:52:07 PM PT

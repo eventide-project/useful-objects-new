@@ -1,6 +1,7 @@
 # Useful Objects — Aspiration
 
 - **State:** Active
+- **Tags:** [aspiration]
 
 ## Premise
 
@@ -303,3 +304,4 @@ Changed by Scott Bellware on Mon Aug 17 2026 at 9:57:58 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:07:43 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:17:27 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:01:26 PM PT
+Changed by Scott Bellware on Mon Aug 17 2026 at 11:52:07 PM PT
