@@ -7,3 +7,7 @@ todo.md
 .claude/*
 !.claude/settings.json
 .DS_Store
+
+# The journal is committed with the project. No scratch pattern above may
+# swallow an entry, whatever a writer's title happens to contain.
+!waytide/local/journal/**
