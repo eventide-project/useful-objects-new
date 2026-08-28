@@ -1,0 +1,9 @@
+.bundle/
+Gemfile.lock
+*.gem
+gems
+*sketch*
+todo.md
+.claude/*
+!.claude/settings.json
+.DS_Store
