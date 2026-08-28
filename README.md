@@ -1,10 +1,9 @@
 # The Doctrine of Useful Objects
 
-A "useful object" is a narrow lens to look through, but it's a starting point to an elegant simplification of the cacophony of "design".
+A "useful object" is a narrow lens to look through, but it's an cool quiet to the hot cacophony of design lingo.
 
-A "useful object" is a narrow lens to look through, but it's an elegant quiet to the cacophony of "design".
-
-A useful object is a behavioral thing. Someone once said something like, _what is an object but a poor man's function_. Even knowing the difference probably gives someone a decent chance of not being poor, either way. But the point about action-oriented design is well received.
+Objects at their inception1
+A useful object is thing that does a thing. Someone once said something like, _an object is a poor man's function_. Knowing what an object and a function are is likely to keep either characters in the drama from being poor, but the point about action-oriented design is well received in both forms of languages.
 
 The actual quote was more like, _what is an object but a poor man's closure_. It's behavior. And it has some data that it operates on. But it's not a row in a database related to some other row in the database. It's just the part of the code that does the doing. Some doing is indeed saving things and retrieving them, but it's a tiny fraction of objects that do that kind of thing. ORM doesn't map well to OO because ORM is about data going through different phases of it's life and OO is about actions (that inevitably have some pertinent data).
 
