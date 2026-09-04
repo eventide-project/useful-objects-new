@@ -1,4 +1,4 @@
-# Work Session — The Substitute and Its Predicate (Fri Sep 4 2026 09:54)
+# Work Session — The Substitute and Its Predicate (Fri Sep 4 2026 10:08)
 
 The session began with housekeeping the previous one had left — a journal entry that git was silently ignoring, stale comments in a machine-level configuration file, and a gemspec declaring the wrong license. It became the two increments that finish what the first feature deferred: a specialized substitute for the HTTP client, and the consonant predicate that occupies it. It ended with the pending work item the reference implementation plan has been asking for since it was written.
 
@@ -58,12 +58,27 @@ Both features concluded, merged with `--no-ff`, and were verified after the merg
 
 The plan's fourth statement — the build process recorded in enough detail to be reproduced, in a file separate from `logs/` — was queued as the project's **first deferred item**. It will print at the start of every session from now on.
 
+## 8. After this record was written
+
+The sections above were written at 09:54 and the session continued. What follows happened after them.
+
+**Two fixes to the plan.** Its filename ended `ACTIVE` while its state line read `Open`, and the line is the only authoritative statement, so the file was renamed to `…-OPEN.md`. Its second bullet still read `an object object`, the wording the engineer had corrected on 2026-08-28 and an editor revert had undone. Both are corrections rather than amendments, and neither took a log entry: the state did not change, and a wording fix settles nothing.
+
+**A second journal entry.** *I worked with Pablo and Ethan on the HTTP client's substitute.* The title alone, its body and summary both dropped as duplicates of it. The `.gitignore` negation added earlier caught it, which is the first time that fix was exercised on an entry it was not written for.
+
+**The reconciliation list.** The engineer asked what remained to be reconciled, and the four items were written into this record as the section above. Three implementation records, three loop records, and two work session records were examined and left alone, all being historical.
+
+**The work-is-definitive rule.** Item 3 of that list said the plan's second and third statements were overtaken by what was built. The engineer answered that when the work diverges from the plan, it is the work that is definitive, and the plan should not necessarily need to be updated to reflect the work as if the plan was perfectly prescient. That is now this project's third local rule.
+
+**Item 3 stands as written**, on the engineer's instruction. Under the rule it would not have been listed, and leaving it is the rule applied to this record — a record is not back-filled to read as though it had known better.
+
 ## Takeaways
 
 - **Read the material before proposing.** Three wrong proposals preceded reading the demos and probing the gem. The right hinge was visible in `10_specialized_dependency.rb` the whole time.
 - **Verify an API before offering it as an option.** This session repeated the previous one's lesson in a new form, and the fix is the same: list what the object actually exposes.
 - **An option that varies a name and not what the use site states is padding.** The two-option floor does not license inventing the second one.
 - **A silent `.gitignore` match is worse than a loud failure.** Nothing reports a file that never appears in `git status`.
+- **A plan is not owed an amendment when the work moves past it.** The agent listed a divergence as a pending reconciliation, and the engineer's correction became a rule.
 - **Naming costs more exchanges than mechanism.** The specialization mechanism took one gate. What to call the files, contexts, controls, and tests took seven.
 
 ## Glossary
@@ -71,6 +86,7 @@ The plan's fourth statement — the build process recorded in enough detail to b
 - **Specialized substitute** — a substitute shaped by a `Substitute` module on the subject class, rather than the bare mimic the dependency macro supplies by default.
 - **The mixin form** — a `Substitute` module carrying no `build`. The gem builds a recording mimic and extends it with the module, so the substitute **is a** `Substitute`.
 - **The build form** — a `Substitute` module carrying `self.build`, which supplies the substitute itself. What it returns is not extended with the module.
+- **Definitive** — of the work, when it diverges from the plan. The work is what happened, and the plan is not edited to read as though it had foreseen it.
 - **Deferred item** — an idea tagged `[deferred]`. The tag is the queue, and it prints at the start of every session. It is not the `Deferred` state, which means parked indefinitely.
 
 ## Where the durable records live
@@ -80,7 +96,8 @@ The plan's fourth statement — the build process recorded in enough detail to b
 - **Loop records:** one per feature, the second declaring the mid-flight mode change and running to twelve cycles.
 - **Decision log:** seven entries dated 2026-09-04.
 - **Code:** `lib/upload/http_client.rb` carrying the `Substitute` module and its `posted?`, with `test/automated/uploaded.rb` and `test/automated/not_uploaded.rb`.
-- **Journal:** the writer's first entry, and its amendment.
+- **Journal:** the writer's first entry, its amendment, and a second entry.
+- **Rules:** `2026-09-04T17-05-34Z-when-the-work-diverges-from-the-plan-the-work-is-definitive.md`, this project's third.
 
 ## What remains to be reconciled
 
@@ -99,5 +116,4 @@ The unattended increment took one instruction and produced a working predicate. 
 
 ---
 
-Authored by Scott Bellware on Fri Sep 4 2026 at 9:54:02 AM PT
-Changed by Scott Bellware on Fri Sep 4 2026 at 10:02:23 AM PT
+Authored by Scott Bellware on Fri Sep 4 2026 at 10:08:05 AM PT
