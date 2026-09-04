@@ -1,0 +1,1 @@
+# The Consonant Predicate feature is completed and integrated into master, the substitute answering posted? and the test reading a domain question rather than the invocation record — see the Consonant Predicate feature record

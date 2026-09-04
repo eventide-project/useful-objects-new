@@ -1,6 +1,6 @@
 require_relative "automated_init"
 
-context "Upload" do
+context "Uploaded" do
   control_file = "some file"
 
   upload = Upload.new
@@ -9,8 +9,8 @@ context "Upload" do
 
   comment "Control File: #{control_file.inspect}"
 
-  context "Posts the file to the HTTP client" do
-    posted = upload.http_client.invoked?(:post, content: control_file)
+  context "The HTTP client posts the file content" do
+    posted = upload.http_client.posted?(control_file)
 
     detail "Posted: #{posted.inspect}"
 

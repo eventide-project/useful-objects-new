@@ -4,6 +4,9 @@ class Upload
     end
 
     module Substitute
+      def posted?(content)
+        invoked?(:post, content: content)
+      end
     end
   end
 end
