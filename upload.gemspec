@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ["The Eventide Project"]
   s.email = "opensource@eventide-project.org"
   s.homepage = "https://github.com/eventide-project/useful-objects-new"
-  s.licenses = ["MIT"]
+  s.licenses = ["Eventide Common Interest License"]
 
   s.require_paths = ["lib"]
   s.files = Dir.glob("{lib}/**/*")
