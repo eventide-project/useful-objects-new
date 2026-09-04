@@ -1,0 +1,1 @@
+# The Specialized Substitute feature is completed and integrated into master, the specialization mechanism built and the consonant predicate left to a later increment — see the Specialized Substitute feature record
