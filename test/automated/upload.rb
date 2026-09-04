@@ -10,7 +10,7 @@ context "Upload" do
   comment "Control File: #{control_file.inspect}"
 
   context "Posts the file to the HTTP client" do
-    posted = upload.http_client.invoked?(:post, content: control_file)
+    posted = upload.http_client.posted?(control_file)
 
     detail "Posted: #{posted.inspect}"
 
