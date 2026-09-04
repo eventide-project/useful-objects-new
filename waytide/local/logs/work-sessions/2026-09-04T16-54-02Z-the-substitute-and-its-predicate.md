@@ -82,6 +82,17 @@ The plan's fourth statement — the build process recorded in enough detail to b
 - **Code:** `lib/upload/http_client.rb` carrying the `Substitute` module and its `posted?`, with `test/automated/uploaded.rb` and `test/automated/not_uploaded.rb`.
 - **Journal:** the writer's first entry, and its amendment.
 
+## What remains to be reconciled
+
+Four things were outstanding when this record was written, and each is a live artifact citing something that has changed.
+
+1. **The design reconciliation for this record.** The work-sessions convention puts it to the engineer once the record is written. The prompt was interrupted so the engineer could ask what would change in the plan, and it was not answered afterward.
+2. **The plan does not cite the deferred item that now carries its fourth statement.** That statement asks for a reproducible record of the build process. It is queued as `2026-09-04T16-52-02Z-a-reproducible-record-of-the-build-process-ACTIVE.md`, and nothing in the plan points at it.
+3. **The plan's second and third statements are overtaken by what was built.** The second describes an HTTP client and an Upload object that uses it, which now exist. The third says the later demos are the more relevant ones, and demos 10 through 13 have been used where 14 through 17 have not been reached. An idea is amended by dated addition rather than rewritten.
+4. **The Useful Objects aspiration's `useful-objects-website` resolution.** Dated 2026-08-04, it states the companion project does not exist yet and is created once this project has more clarity. Whether that still holds is not readable from this repository.
+
+**Nothing else is outstanding.** The three implementation records, the three loop records, and the two work session records cite renamed files and describe deferred decisions since settled. All eight are historical records — concluded feature records and running records — and are left as written.
+
 ## A closing note
 
 The unattended increment took one instruction and produced a working predicate. The attended naming that followed took seven exchanges and changed no behavior. That is not an argument against attended work — the gates caught three wrong proposals before they became code. It is an observation that the method's cost falls where judgment is cheapest to spend and hardest to skip, and that naming is where an engineer's judgment is least substitutable.
@@ -89,3 +100,4 @@ The unattended increment took one instruction and produced a working predicate. 
 ---
 
 Authored by Scott Bellware on Fri Sep 4 2026 at 9:54:02 AM PT
+Changed by Scott Bellware on Fri Sep 4 2026 at 10:02:23 AM PT
