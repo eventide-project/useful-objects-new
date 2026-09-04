@@ -20,7 +20,9 @@ The term is this project's own, settled in the work session of 2026-08-04: a con
 
 - **Working location, at the start** — branch only. Selected by the engineer through the selection interface on 2026-09-04.
 - **The engineer's level of participation, at the start** — **unattended**. Selected by the engineer through the selection interface on 2026-09-04. The loop does not stop at the hinges, and the agent determines each one.
+- **The engineer's level of participation, changed mid-flight** — **attended**, on the engineer's instruction of 2026-09-04, after the consonant predicate and the discrimination test were generated. The original selection above stands as written. **This departs from the attended-or-unattended-is-chosen-at-the-start rule**, which has the mode chosen at the start and held for the work's duration. The rule states no trigger for changing it, where the lifecycle does state two for the working location. The engineer's instruction settles it, and the record carries the departure rather than hiding it.
 
 ---
 
 Authored by Scott Bellware on Fri Sep 4 2026 at 9:25:27 AM PT
+Changed by Scott Bellware on Fri Sep 4 2026 at 9:33:02 AM PT
