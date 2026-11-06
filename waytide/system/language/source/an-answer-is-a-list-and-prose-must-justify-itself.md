@@ -1,4 +1,4 @@
-# An answer is a list. Prose must justify itself
+# An answer is a list, and prose must justify itself
 
 An answer to the engineer is a **list**. Prose is not forbidden, and it is not the default. It is written where one of the conditions below applies. Those conditions are the whole of what justifies it.
 
@@ -36,6 +36,8 @@ An answer to the engineer is a **list**. Prose is not forbidden, and it is not t
 
 **A numbered list asserts sequence.** So reasoning whose steps rest on each other is written `1.`, `2.`, `3.` — the dependence is carried by the form rather than escaping it.
 
+**A list whose entries the engineer may refer back to is numbered too, as handles rather than as a sequence.** That is a list of options, findings, candidates, or things to decide. The engineer can then name one by its number, *#2*, and the number says which entry is meant and nothing about its order.
+
 **This is why dependent reasoning is not an exception.** The problem was never prose against lists. It was one kind of list used where another was meant.
 
 ## After a list answer, the engineer is offered an expansion
@@ -61,15 +63,92 @@ For more detail than bullet points, ask for an expanded answer.
 
 **How to apply:** answer in a list. State facts in it. Remove any list item that describes a decision or explains an unasked-for reason. Remove any list item that characterizes the work, or reports what the agent did to be sure.
 
-Test each survivor by whether it could be false. Number the list where its list items depend on each other, and leave it unordered where they do not.
+Test each survivor by whether it could be false. Number the list where its list items depend on each other, or where the engineer may refer back to them, and leave it unordered otherwise.
 
 Write prose only where the answer is a sentence or two. Do not reach for it because an explanation was requested, or because the reasoning is connected. The first is not a justification, and the second is served by numbering. Where the answer left something out, end it with `For more detail than bullet points, ask for an expanded answer.` on its own line, and omit that line where the answer says all it has.
 
+## Expanding an answer
+
+**`/expand` gives the previous answer at more length: the detail that was compressed out of it.** It says the same thing the answer said, with no claim changed, and adds the reasoning, the figures, and the examples the list left out. It is still led by its point, and still a list where its items are facts, with prose where reasoning runs from one step to the next.
+
+## Compressed
+
+1. An answer to the engineer is a list.
+2. Prose is not forbidden, but it is not the default.
+3. Prose is written only where a condition below applies. The agent must name the condition that applies.
+4. Where no condition applies, the answer is a list.
+
+## What justifies prose
+
+1. Only one condition justifies prose: the answer is a sentence or two.
+2. Such an answer takes no list. Examples: *Yes*, *The suite passes*, *Correct — the rule says so and I did not follow it*.
+3. No other condition justifies prose.
+4. An explanation the engineer asked for does not justify prose. It is answered in a list.
+5. Connected or dependent reasoning does not justify prose. It is answered in a numbered list.
+
+## A list item states a fact. It does not narrate
+
+1. Each list item states what is true. It does not describe the work.
+2. A list whose items are narration fails this rule, even when the list form is correct.
+3. Do not describe a decision as a decision. Examples: *the judgment is left as a judgment on purpose*, *this was recorded as a new entry rather than by rewriting the old one*, *the option was declined*.
+4. Do not explain why something is as it is, unless asked. Examples: *so a later reader knows what tightening would mean*, *which is what keeps the record honest*, *for the same reason the other rule gives*.
+5. Do not characterize the work or its result. Examples: *the miss is instructive*, *worth noting*, *this is the substantive part*, *cleanly*, *correctly*.
+6. Do not report the agent's process. Examples: *I checked*, *verified rather than assumed*, *rather than trusting the composite's copy*.
+7. State the fact that is left once those are removed. Example: *The rule names two stricter forms: the line on every list answer, or above a length threshold. Neither is adopted.*
+8. Test each list item by asking whether it could be false. Remove it if it could not.
+9. *The check is green*, *nine of thirteen scripts lack it*, and *the branch is deleted* are facts. *This keeps the record honest* is narration.
+10. Reasoning belongs in rules, records, and commit messages. It does not belong in an answer unless asked for.
+11. Reasoning the engineer wants is asked for through the expansion line.
+
+## Dependent reasoning takes an ordered list, not prose
+
+1. An unordered list is only for list items that are parallel and independent.
+2. Number reasoning whose steps rest on each other: `1.`, `2.`, `3.`.
+3. Number a list whose entries the engineer may refer back to, such as options, findings, candidates, or things to decide.
+4. Those numbers are handles, such as *#2*. They imply no order.
+5. In all other cases, leave the list unordered.
+
+## After a list answer, the engineer is offered an expansion
+
+1. Where an expansion would add something, end the answer with this line:
+
+```
+For more detail than bullet points, ask for an expanded answer.
+```
+
+2. Write it as a line on its own, not as a selection prompt.
+3. Include it only where the agent compressed material out of the answer.
+4. Leave it out of an answer that says all it has.
+5. It offers more depth on the answer given, not a next topic. Do not end any answer with an offer of a next topic, or of what else might be done.
+6. It names the form being given up, "more detail than bullet points". "More detail" alone does not do this.
+7. Whether to include the line is the agent's own judgment.
+8. Do not make the judgment stricter until there is proof that it needs to be.
+9. Two stricter forms are not adopted: appending the line to every list answer, or appending it above a length threshold.
+10. Either stricter form may be adopted if the judgment proves unreliable in use.
+
+## Expanding an answer
+
+1. `/expand` gives the previous answer at more length, adding the detail compressed out of it: the reasoning, the figures, and the examples.
+2. It says the same thing, with no claim changed, and is still led by its point.
+3. It is a list where its items are facts, with prose where reasoning runs from one step to the next.
+
+## Compression
+
+- 2026-10-24, compressed: compression 0.49, change 0.71, solubility 25 → 53, clarity 0.41 → 0.78, 22 directives, 22 kept, 0 less precise, 0 lost, after 1 repair, re-checked kept
+- 2026-10-28, revised: Why points removed, solubility 53 → 54, clarity 0.78 → 0.78; checked: 22 directives, 22 kept, 0 less precise, 0 lost
+- 2026-11-03, revised: /expand gives the previous answer at more length; checked: 29 directives, 28 kept, 1 less precise, 0 lost. Left less precise, from before this change: the detail behind a sentence or two taking no list
+
+## History
+
+Until Mon Nov 2 2026 an answer offered an expansion, and no rule said what the expansion gave.
+
+Until Sun Oct 25 2026 this rule was titled "An answer is a list. Prose must justify itself".
+
 Related:
 
-- the communicate-plainly-name-the-thing rule — which governs the words inside the list and reaches conversation the same way this does
-- the language-is-precise-here premise
-- `foundation`'s present-every-prompt-through-askuserquestion rule — the selection interface, which is where a **question** goes — this rule governs an **answer**, and the two do not overlap
+- the communicate-plainly-and-name-the-actual-thing rule — which governs the words inside the list and reaches conversation the same way this does
+- the language-is-used-precisely-here-and-words-are-load-bearing rule premise
+- `foundation`'s present-every-prompt-to-the-engineer-through-the-selection-ui rule — the selection interface, which is where a **question** goes — this rule governs an **answer**, and the two do not overlap
 
 ---
 
@@ -88,3 +167,12 @@ Changed by Scott Bellware on Tue Aug 11 2026 at 1:12:44 AM PT
 Changed by Scott Bellware on Tue Aug 11 2026 at 2:41:09 AM PT
 Changed by Scott Bellware on Tue Aug 11 2026 at 5:06:31 AM PT
 Changed by Scott Bellware on Wed Oct 21 2026 at 9:37:27 AM PT
+Changed by Scott Bellware on Wed Oct 21 2026 at 9:35:39 PM PT
+Changed by Scott Bellware on Sat Oct 24 2026 at 2:41:36 PM PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 4:22:48 PM PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 4:25:01 PM PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 4:25:07 PM PT
+Changed by Scott Bellware on Sun Oct 25 2026 at 4:25:32 PM PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 2:06:51 PM PT
+Changed by Scott Bellware on Tue Oct 27 2026 at 2:29:24 PM PT
+Changed by Scott Bellware on Tue Nov 3 2026 at 10:38:55 AM PT
