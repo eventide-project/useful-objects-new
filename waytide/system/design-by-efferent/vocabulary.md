@@ -2,16 +2,7 @@
 
 The lexicon of **Design By Efferent** (DBE) — use this vocabulary, with these meanings, in code, tests, rules, designs, commits, and prose. This is the canonical glossary. The deeper docs defer to it.
 
-**Every word here is one of two things.** This holds for the terms below, and for the **Use** column of any substitutions table in this file.
-
-- **Approved** in the STE dictionary, and used with its approved meaning. Nothing further is required, and the entry fixes the word against a neighbouring one rather than asking for permission.
-- **Reserved** as a technical noun or a technical verb, **in a category the entry names**. An STE noun category is reserved under STE Rule 1.5 where the dictionary omits the word, and under STE Rule 1.6 where it lists and refuses it. An STE verb category is reserved under STE Rule 1.12. An ETE category is reserved under the ete-declares-its-own-categories rule. STE Rule 1.8 requires a technical noun to be approved in the subject field, and this file is that approval.
-
-**A reserved word's entry states what the STE dictionary says about it.** The word is absent from the dictionary. Or the dictionary refuses it and gives an alternative. Or the dictionary approves it with a meaning Waytide does not use. The last of the three is governed by the ete-fixes-the-meaning-of-a-word-in-its-category rule, and it is the most expensive of them.
-
-**The sequence for reserving a word is the a-word-is-reserved-in-six-steps rule**, in the `language` package's `ete/` directory.
-
-**Silence means different things in the two kinds of entry.** A **definition** with no STE note names a term absent from the STE dictionary, and reserves it. A definition exists to name a term, and a term names something in the subject field. A **substitution's Use word** with no STE note is **ordinary vocabulary**, which is not reserved and not rewritten. See the `language` package's ordinary-vocabulary-is-not-reserved-and-not-rewritten rule, and its waytide-keeps-its-word-where-the-ste-word-means-something-else rule.
+**Every word here is approved in the STE dictionary, or reserved in a category its entry names.** The a-vocabulary-file-holds-terms-substitutions-and-discontinuations-and-each-word-is-approved-or-reserved rule sets out what each means, what a reserved word's entry states, and what silence means in an entry.
 
 ## The one-liner
 
@@ -22,14 +13,14 @@ The lexicon of **Design By Efferent** (DBE) — use this vocabulary, with these 
 | Term | Role | Meaning |
 |---|---|---|
 | **Design By Efferent** / **DBE** | the methodology | The name of the whole approach these rules, this lexicon, and the loop describe. A **design** discipline (tests drive design, not "development"), driven **by the efferent** — the use-site view. A variant *of* TDD (tests are the vehicle). The name foregrounds what makes it distinct: design driven from the efferent reference. **STE: absent from the STE dictionary. Technical noun, ETE engineering, design, process, and method.** |
-| **loop** | the cycle | The DBE cycle — a *distributed* OODA loop (Boyd): the AI **observes** and **acts** (mechanized), the human **orients** and **decides** at the gates. Orientation — design judgment — is the irreplaceable phase, kept with the human. **STE: `LOOP (n)` is approved, meaning *a circular shape made in a flexible material*, which is not this. `loop (v)` is not approved and gives LOOP (n). Technical noun, ETE engineering, design, process, and method, with its meaning fixed here per the ete-fixes-the-meaning rule.** |
-| **cycle** | the unit of the loop | **One traversal of the loop**: a hinge surfaced, decided, and acted on. It is the unit a loop record is written in — one section per cycle, carrying that cycle's hinge, the options put at the gate, and the decision. **STE: `CYCLE (n)` is approved, meaning *one complete sequence of operation*, which names a machine's repetition rather than a design cycle. `cycle (v)` is not approved and gives CYCLE (n). Technical noun, ETE engineering, design, process, and method, with its meaning fixed here per the ete-fixes-the-meaning rule.** |
+| **loop** | the cycle | The DBE cycle — a *distributed* OODA loop (Boyd): the AI **observes** and **acts** (mechanized), the human **orients** and **decides** at the gates. Orientation — design judgment — is the irreplaceable phase, kept with the human. **STE: `LOOP (n)` is approved, meaning *a circular shape made in a flexible material*, which is not this. `loop (v)` is not approved and gives LOOP (n). Technical noun, ETE engineering, design, process, and method, with its meaning fixed here per the ete-fixes-the-meaning-of-a-word-in-its-category rule.** |
+| **cycle** | the unit of the loop | **One traversal of the loop**: a hinge surfaced, decided, and acted on. It is the unit a loop record is written in — one section per cycle, carrying that cycle's hinge, the options put at the gate, and the decision. **STE: `CYCLE (n)` is approved, meaning *one complete sequence of operation*, which names a machine's repetition rather than a design cycle. `cycle (v)` is not approved and gives CYCLE (n). Technical noun, ETE engineering, design, process, and method, with its meaning fixed here per the ete-fixes-the-meaning-of-a-word-in-its-category rule.** |
 | **hinge** | the object | A decision the design turns on — one that is **subtle** *and* **load-bearing**. Where the human's judgment belongs. **STE: absent from the STE dictionary as a noun. The STE dictionary lists `hinge (v)` and gives TURN for it. Waytide does not use the verb. Technical noun, ETE engineering, design, process, and method.** |
 | **attended** / **unattended** | the human's level of participation | Whether the loop **stops** at each hinge for the engineer (attended, the default) or the agent decides each hinge and generates through (unattended). Chosen at a feature's or experiment's start and held for its duration. **DBE is in effect either way** — the cradle, the efferent-first actuation, and the solubility standard hold in the two. Only the stopping changes. A batch-size trade: attention spent continuously against rework paid at the end. **STE: absent from the STE dictionary. Technical adjectives, ETE human-computer interaction.** |
 | **gate** | the mechanism | Where the loop stops and responsibility transfers to the human. The interrupt. The loop *waits* at a gate, and `gate` is a noun and never a verb. It is the mirror of **transfer**, which is a verb and never a noun. **STE: absent from the STE dictionary in this sense. The standard lists `gate` in category 5 as an airport gate. Technical noun, ETE engineering, design, process, and method.** |
 | **deliberation** | the human's act | What the human does at a gate: weighs the hinge and decides. *Deliberate* = carefully weighed **and** intentional — the opposite of the AI's averaging. **STE: absent from the STE dictionary. Technical noun, ETE deliberation and speech.** |
 | **code generation** | what the agent produces between hinges | The code the agent writes straight through, without stopping. The complement of **deliberation**, which is what the human does at a gate, and the substance of what is **mechanical**. `product generation` in the `versioning` vocabulary is an unrelated term. **STE: absent from the STE dictionary. Technical noun, ETE engineering, design, process, and method.** |
-| **mechanical** / **mechanics** | the complement | Everything that isn't a hinge — the AI generates it straight through. **STE: `MECHANICAL (adj)` is approved, meaning *related to or operated with a mechanism*, which is not this. Technical noun and technical adjective, ETE engineering, design, process, and method, with its meaning fixed here per the ete-fixes-the-meaning rule.** |
+| **mechanical** / **mechanics** | the complement | Everything that isn't a hinge — the AI generates it straight through. **STE: `MECHANICAL (adj)` is approved, meaning *related to or operated with a mechanism*, which is not this. Technical noun and technical adjective, ETE engineering, design, process, and method, with its meaning fixed here per the ete-fixes-the-meaning-of-a-word-in-its-category rule.** |
 | **subtle** (vs **crude**) | first mark of a hinge | The decision takes design judgment that isn't written in the code or tests — it lives in the person. Crude = a tool/pattern/answer you can read off the artifacts. (Per Bellware's subtle/crude-knowledge distinction: https://madabout.software/articles/subtle-knowledge-crude-knowledge/) **STE: absent from the STE dictionary. Technical adjective, ETE engineering, design, process, and method.** |
 | **cradle** | the constraint | The efferent test, held during code generation — it holds the implementation in position without gripping it rigid, steering toward solubility. **STE: absent from the STE dictionary. Technical noun, ETE engineering, design, process, and method.** |
 | **efferent** | the perspective | Designing a unit from the use site. DBE is the method built on designing from this view: the test is the first efferent reference, the interface designed from the efferent side. **STE: absent from the STE dictionary. Technical noun, ETE engineering, design, process, and method.** |
@@ -42,13 +33,11 @@ The lexicon of **Design By Efferent** (DBE) — use this vocabulary, with these 
 
 ## The two results the gates rest on
 
-Every gate's form — options plus a mandatory free-text option — follows from two results, and the rules refer to them by these names:
+Every gate's form follows from two results, and the rules refer to them by these names:
 
 **Make the human produce the answer, not approve one.** A single proposal put up for approval ("here's my actuation — approve?") puts the human in judge mode, downstream of the AI's mean-drawn answer. Judging is not producing: the human ratifies, and their judgment is pulled toward the average rather than exercised above it. Offering several genuine alternatives keeps the human comparing real candidates, and producing an answer instead of ratifying one. So a gate presents alternatives, never a fait accompli.
 
 **The best options are ones the AI can't produce.** The option set is the AI's own, drawn from the average. The best answer is often one only the human can produce.
-
-A closed list tempts the human to pick from it instead of producing their own. So every gate keeps the free-text option there — the human dictating outright, or a chat to work the answer out. It is mandatory, at every gate, without exception. It is what keeps the human above the AI's mean when the right answer is not on the list.
 
 The first result says *why there are options*. The second says *why the options are never enough*.
 
@@ -132,14 +121,108 @@ A word removed from use with nothing in its place. **This is not a substitution.
 
 **How to apply:** Use these words, with these meanings, wherever you write about DBE. Prefer them over synonyms. Do not reintroduce a discontinued term.
 
+## Compressed
+
+## The vocabulary
+
+1. This is the canonical glossary. The deeper docs defer to it.
+2. The one-liner:
+
+> The AI **generates** straight through, and **waits** at the **hinges** — the **subtle**, **load-bearing** decisions — for the human to **deliberate**. Everything else is **mechanical**.
+
+## Terms
+
+1. **Design By Efferent** / **DBE** (the methodology): the name of the whole approach these rules, this lexicon, and the loop describe. A design discipline, where tests drive design, not "development". Driven by the efferent, the use-site view. A variant of TDD, with tests as the vehicle. DBE is the single canonical name.
+2. **loop** (the cycle): the DBE cycle, a distributed OODA loop (Boyd). The AI observes and acts, mechanized. The human orients and decides at the gates. Orientation, design judgment, is the irreplaceable phase, kept with the human.
+3. **cycle** (the unit of the loop): one traversal of the loop: a hinge surfaced, decided, and acted on. It is the unit a loop record is written in: one section per cycle, carrying that cycle's hinge, the options put at the gate, and the decision.
+4. **hinge** (the object): a decision the design turns on, one that is subtle and load-bearing. Where the human's judgment belongs.
+5. **attended** / **unattended** (the human's level of participation): whether the loop stops at each hinge for the engineer (attended, the default), or the agent decides each hinge and generates through (unattended). Choose it at a feature's or experiment's start and hold it for its duration. DBE is in effect either way: the cradle, the efferent-first actuation, and the solubility standard hold in both. Only the stopping changes.
+6. **gate** (the mechanism): where the loop stops and responsibility transfers to the human. The interrupt. The loop waits at a gate. `gate` is a noun and never a verb. **transfer** is a verb and never a noun.
+7. **deliberation** (the human's act): what the human does at a gate: weighs the hinge and decides. *Deliberate* means carefully weighed and intentional, the opposite of the AI's averaging.
+8. **code generation** (what the agent produces between hinges): the code the agent writes straight through, without stopping. The complement of deliberation, and the substance of what is mechanical. It is unrelated to `product generation` in the `versioning` vocabulary.
+9. **mechanical** / **mechanics** (the complement): everything that is not a hinge. The AI generates it straight through.
+10. **subtle** (vs **crude**) (first mark of a hinge): the decision takes design judgment that is not written in the code or tests. It lives in the person. Crude is a tool, pattern, or answer that can be read off the artifacts. The distinction is Bellware's subtle and crude knowledge: https://madabout.software/articles/subtle-knowledge-crude-knowledge/.
+11. **cradle** (the constraint): the efferent test, held during code generation. It holds the implementation in position without gripping it rigid, steering toward solubility.
+12. **efferent** (the perspective): DBE is built on designing from this view: the test is the first efferent reference, and the interface is designed from the efferent side.
+13. **actuation** (the act): the invocation of the unit under test, the first efferent reference. Write it before any implementation, so the interface is designed from the use site. It is the first and highest-leverage gate.
+14. **observation** (the act of reading the outcome): what the test observes about the outcome of the actuation. An **assertion** is the mechanism that implements an observation, not the observation itself.
+15. **load-bearing** (second mark of a hinge): other work rests on the decision, so a wrong one spreads and sticks: cheap to fix now, costly later.
+16. **solubility** (the quality): in DBE it is the focus of the actuation hinge. Judge its particular expression from the use site, the efferent view.
+17. **mean-bias** (the AI's failure mode): the AI's pull toward the average of the code it has seen, most of which is poorly designed. It acts on the human too: a single AI proposal put up for approval drags the human's judgment toward that average.
+
+## The two results the gates rest on
+
+1. The rules refer to two results by these names: **Make the human produce the answer, not approve one**, and **The best options are ones the AI can't produce**.
+2. A gate presents several genuine alternatives. It never presents a single proposal for approval or a fait accompli.
+
+## "Cycle" is scoped by what precedes it
+
+1. The word before "cycle" says which of three nested things it names. This is the one place this vocabulary lets a term carry more than one meaning.
+2. **a cycle**: one traversal of the loop: a hinge surfaced, decided, acted on. The unit a loop record is written in.
+3. **the hinge cycle**: the five hinges in order, actuation through naming, for one outcome's initial implementation. A hinge cycle is five cycles.
+4. **the DBE cycle**: the loop itself, the whole distributed OODA cycle. Interchangeable with **the loop**, which is the preferred term.
+5. Bare "cycle" is always one traversal. Never write the larger two without their qualifier.
+
+## "Load-bearing", explained
+
+1. A hinge needs both marks, subtle and load-bearing. They are independent. Subtle is about who can make the call. Load-bearing is about what depends on the call.
+2. The metaphor is literal, as a load-bearing wall carries the structure above it and a partition wall does not.
+3. A decision is load-bearing when other work rests on it: later code, the tests, and other decisions assume it. A wrong one spreads, as everything built on it inherits the mistake, and sticks, as undoing it means undoing them.
+4. A load-bearing decision is cheap to fix now and costly to fix later. The loop waits before the weight is added, not afterward.
+5. To recognize it, ask: if this decision is wrong, how far does the damage spread, and how expensive is it to reverse once built on? Wide spread and expensive reversal is load-bearing. Local and cheap to change is not.
+6. Load-bearing but crude, with the answer readable off the code, tests, or patterns: the AI makes it, with no gate.
+7. Subtle but not load-bearing: do not stop the human. A wait there is ceremony.
+8. Subtle and load-bearing: a hinge. The loop waits at a gate there.
+9. The actuation is load-bearing. The wording of a `comment` line is not.
+
+## The loop, as a distributed OODA cycle
+
+1. The loop is a distributed OODA loop (John Boyd: Observe, Orient, Decide, Act), with the four phases split between the AI and the human.
+2. **Observe**, the AI: surfaces the state: the proposed actuation, the candidate options, the test, the run result.
+3. **Orient**, the human: deliberates, weighing the hinge against design judgment: the standard of solubility, subtle knowledge, experience.
+4. **Decide**, the human: chooses at the gate: selects an option, dictates, or accepts.
+5. **Act**, the AI: generates within the cradle.
+6. Orient is the load-bearing phase, and the human owns it. The AI's regression to the average is a degraded orientation.
+7. Boyd's implicit guidance and control is mechanical code generation: once orientation is settled, the AI generates straight through. The gate, an explicit Decide, fires only at a hinge.
+8. The four phase names are reserved, as nouns and as verbs. Write the noun capitalized for the phase and the verb in lower case for the act: *the AI observes and acts*.
+9. The STE dictionary lists all four as verbs: MONITOR for `observe`, POINT for `orient`, SELECT for `decide`, and for `act` the guidance to use an accurate verb. None of the four nouns is in it. Keep the two forms, so the Boyd quotation stays whole. See the `language` package's waytide-keeps-its-word-where-the-ste-word-means-something-else rule.
+10. Do not import OODA's adversarial, tempo use. There is no adversary in DBE. Only the structure transfers: the four phases and the primacy of Orient.
+
+## Substitutions
+
+1. Write **subtle**, not "intrinsic": the first mark of a hinge, where the judgment lives in the person rather than in the artifacts.
+2. Write **load-bearing**, not "asymmetric": the second mark of a hinge, where other work rests on the decision.
+3. Write **mechanical**, not "non-hinge": everything that is not a hinge, which the AI generates straight through.
+4. Write **cycle**, not "pass": one traversal of the loop.
+5. Write **wait**, not "gate" as a verb: what the loop does at a hinge. `gate` is the noun for the mechanism and takes no verb form.
+6. Write **the human's level of participation**, not "gating cadence": whether the human is in the loop. Attended is in the loop, and unattended is out of it. Attended and unattended cause a cadence and are not one.
+
+## Discontinuations
+
+1. **discriminator**: there is no test-noun. The test is "is this a hinge?"
+2. **capability-independent**: state it plainly. Subtlety is about the design, not the model.
+
+## Compression
+
+- 2026-10-29, compressed: 17966 → 12759 characters; checked: 120 directives, 109 kept, 10 less precise, 1 lost; 6 repairs, re-checked: 85 directives, 81 kept, 3 less precise, 1 lost; what is still not kept was judged reasons or background
+- 2026-10-29, revised: the head line saying every word is approved or reserved is left out of the compressed text, at the engineer's direction, since the a-packages-vocabulary-holds-its-terms-and-the-most-specific-one-decides rule states it in the read
+- 2026-10-29, revised: the lines naming the vocabulary and saying it is binding are left out of the compressed text, at the engineer's direction; the loader names the file, and the a-packages-vocabulary-holds-its-terms-and-the-most-specific-one-decides rule says every vocabulary binds
+- 2026-10-29, revised: the line "Prefer these words over synonyms. Do not reintroduce a discontinued term." is left out of the compressed text, at the engineer's direction, after an evaluation found the a-packages-vocabulary-holds-its-terms-and-the-most-specific-one-decides rule and the language rules already say to use a vocabulary's terms and no loose synonym, and the Discontinuations section takes a discontinued word out of use
+- 2026-10-29, revised: the `Explain` option and every statement about the free-text option are removed, at the engineer's direction; checked: 111 directives, 96 kept, 6 less precise, 9 lost; what is not kept was left out on purpose, in this revision or an earlier one, or is stated in the pre-loaded present-every-prompt-to-the-engineer-through-the-selection-ui rule
+- 2026-11-05, revised: each entry's STE note is left out of the compressed text, at the engineer's direction; it matters only when a word is reserved or an entry written, and the full text keeps it
+
+## History
+
+Until Thu Oct 29 2026, this file said that every gate's form is options plus a mandatory free-text option, and that every gate keeps the free-text option, for the human to dictate outright or open a chat, because a closed list tempts the human to pick from it instead of producing their own answer. The file said nothing about an `Explain` option.
+
 Related:
 
-- the DBE-as-design-tool
-- first-turn
-- human-in-the-loop
-- hinge-cycle
-- "TDD designs
-- coverage prevents" rules. The `language` package's solubility rule and its name-literally standard
+- the dbe-is-a-design-tool-not-a-testing-ritual rule
+- the the-first-dbe-gate-is-the-actuation-and-an-unnamed-assert rule
+- the the-human-deliberates-the-hinges-never-the-pass-fail-bar rule
+- the the-hinge-cycle-is-actuation-observation-controls-implementation-and-naming rule
+- the tdd-designs-behavior-coverage-prevents-regression-and-neither-breaks-an-implementation rule
+- the `language` package's solubility-is-how-readily-a-unit-dissolves-into-the-readers-understanding rule and its name-concepts-literally-not-by-analogy-code-or-jargon rule
 
 ---
 
@@ -183,3 +266,11 @@ Changed by Scott Bellware on Fri Aug 14 2026 at 1:38:29 PM PT
 Changed by Scott Bellware on Fri Aug 14 2026 at 2:06:30 PM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 9:41:07 PM PT
 Changed by Scott Bellware on Mon Aug 24 2026 at 11:22:43 PM PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 11:02:45 AM PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 11:55:34 AM PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 12:04:03 PM PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 12:09:54 PM PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 1:34:54 PM PT
+Changed by Scott Bellware on Thu Oct 29 2026 at 1:40:05 PM PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 9:09:28 PM PT
+Changed by Scott Bellware on Thu Nov 5 2026 at 9:33:19 PM PT

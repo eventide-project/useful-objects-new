@@ -15,7 +15,7 @@ The one-liner:
 - Never ask whether to start test-first — it is the standing default.
 
 **Attended or unattended**
-- The human's level of participation is chosen at a feature's or experiment's start, beside the working location. Attended is the default. The question is **Who decides?**, and neither it nor an option names a hinge — the engineer has not met one yet.
+- The human's level of participation is chosen at a feature's or experiment's start, beside the working location. Attended is the default. The question is **Human in the loop**, followed by the agent's unattended confidence: an overall score, then *works* and *voice*. At an overall score of 70% or lower, it warns and recommends Attended. Neither it nor an option names a hinge — the engineer has not met one yet.
 - DBE is in effect either way — the cradle, the efferent-first actuation, and the solubility standard all hold. Only the stopping changes.
 - An unattended cycle is recorded with its hinge and the decision's reasoning, and no options or decision line, since neither happened.
 
@@ -37,7 +37,7 @@ The one-liner:
 **Design vs. coverage**
 - TDD designs behavior. Adding coverage prevents its regression — distinct activities. Never break a working implementation to introduce a test.
 - A *coverage* test's design still waits at the hinges, with the implementation hinge degenerate.
-- Drop an outcome whose test is green-on-arrival — it drives no design.
+- A test of behavior that already exists is coverage, not design.
 - The implementation hinge offers two candidates: the working implementation, or the **red/green/refactor cycle** — chosen, and so not the choreography this method rejects. The red must reach no stable test, and the cycle is unavailable when covering existing behavior.
 
 **The `logs/loops/` artifact directory** (this package contributes it)
