@@ -1,6 +1,6 @@
 # The Reference Implementation — Plan
 
-- **State:** Open
+- **State:** Active
 - **Tags:** [plan]
 
 - The reference implementation is based on the dependencies-and-substitutes example that I provided
@@ -13,3 +13,4 @@
 
 Authored by Scott Bellware on Fri Aug 28 2026 at 8:57:51 AM PT
 Changed by Scott Bellware on Fri Sep 4 2026 at 9:58:01 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 11:00:38 AM PT
