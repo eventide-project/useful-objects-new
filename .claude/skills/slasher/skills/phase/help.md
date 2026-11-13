@@ -11,7 +11,9 @@ PHASE
                                    not realized)
   /phase inconclusive              -> Inconclusive
 
-  /phase help                      Print this command's help
+  Whether a phase states a forecast is asked when it is added.
+  A phase with one is asked the verdict question when it completes.
 
-  Whether a phase reaches a verdict is chosen for each phase,
-  when it is added.
+  /phases                          List the phases, the current one emphasized
+
+  /phase help                      Print this command's help
