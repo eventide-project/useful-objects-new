@@ -1,7 +1,7 @@
 # A reproducible record of the build process
 
-- **State:** Active
-- **Tags:** [deferred]
+- **State:** Deferred
+- **Tags:** [idea]
 - **Waits for:** nothing. It is actionable now.
 
 The reference implementation plan asks for the build process to be recorded in great detail, so that it can be reproduced later. It says the `logs/` files are likely insufficient for this, so the process is recorded in a separate file as well. The purpose is to reproduce the process for future tutorials, demos, and articles, and to feed a future project where the work is explained.
@@ -13,3 +13,4 @@ What the record would have to carry is not settled. The plan states the requirem
 ---
 
 Authored by Scott Bellware on Fri Sep 4 2026 at 9:52:02 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 10:52:50 AM PT
