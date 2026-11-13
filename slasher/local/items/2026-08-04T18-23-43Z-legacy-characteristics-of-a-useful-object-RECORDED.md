@@ -1,7 +1,7 @@
 # Legacy Characteristics of a Useful Object
 
-- **State:** Open
-- **Tags:** [idea]
+- **State:** Recorded
+- **Tags:** [note]
 
 ## Summary
 
@@ -156,3 +156,4 @@ Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:17:27 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:52:07 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 10:54:23 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 11:01:38 AM PT
