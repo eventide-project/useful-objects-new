@@ -1,7 +1,7 @@
 # Characteristics of a Useful Object
 
-- **State:** Open
-- **Tags:** [idea]
+- **State:** Recorded
+- **Tags:** [note]
 
 The characteristics of a useful object — **this generation's statement of what one is**.
 
@@ -106,3 +106,4 @@ Changed by Scott Bellware on Wed Aug 5 2026 at 12:32:03 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 10:17:27 AM PT
 Changed by Scott Bellware on Mon Aug 17 2026 at 11:52:07 PM PT
 Changed by Scott Bellware on Fri Nov 13 2026 at 10:54:24 AM PT
+Changed by Scott Bellware on Fri Nov 13 2026 at 11:02:07 AM PT
