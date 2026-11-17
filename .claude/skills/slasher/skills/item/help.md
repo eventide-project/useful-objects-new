@@ -18,19 +18,26 @@ ITEMS
   /item aspiration, /aspiration    Create an item tagged [aspiration]
   /item goal, /goal                Create an item tagged [goal]
   /item note, /note                Record a note
+  /notes [<n>]                     List the notes, or the n most recent
   /item mistake, /mistake          Create an item tagged [mistake]
   /item problem, /problem          Create an item tagged [problem]
+  /item brainstorm                 Create an item tagged [brainstorm]. A
+                                   brainstorm that names no kind ends as one
   /item list <state>, /list <state>
                                    List items in a state
                                    <state>: any item state, or "current"
-                                   (Open and Active)
+                                   (Open, Active, and Implementation)
+  /item status [<item>]            The item's state, what exists, and what
+                                   is left. <item>: a number from the last
+                                   list, a datetime, or words from the
+                                   title. With none, the Active item
 
   /item start, /start              Open, or Recorded for a goal or an
                                    aspiration -> Active
   /item complete, /complete        -> the kind's concluding state:
-                                   Realized, Done, Corrected, or Resolved
+                                   Realized, Completed, Corrected, or
+                                   Resolved
   /item realize, /realize          -> Realized
-  /item done, /done                -> Done ([work] and [rework] items)
   /item defer, /defer              -> Deferred (kept to do later)
   /item suspend, /suspend          -> Suspended
   /item discontinue, /discontinue  -> Discontinued (no plan to do it)
